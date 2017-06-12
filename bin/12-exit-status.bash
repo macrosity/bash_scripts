@@ -17,7 +17,7 @@ sleep 5
 
 echo "Attempting to remove subsys.lock file :"
 rm /etc/mysql/subsys.lock
-echo $?
+echo $? # The script will exit here as we have configured `set -e` and this exits non-zero, causing it to fail.
 
 sleep 5
 
